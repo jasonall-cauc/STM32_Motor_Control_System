@@ -18,3 +18,8 @@ The development board is an ALIENTEK production. Most of the code is in main.c f
 The system includes an STM32F103 single chip microcomputer, a self-made keyboard, an LCD1602 display screen, and an L298N motor drive module.
 The motor is connected with a pointer, which is on a dial plate of 0-360 degrees.
 The system acquires parameters from the keyboard, displays them on the LCD, and controls the motor to drive the pointer to the given degree.
+
+Global view:
+![global view](https://github.com/jasonall-cauc/STM32_Motor_Control_System/blob/main/Global.png)
+
+
