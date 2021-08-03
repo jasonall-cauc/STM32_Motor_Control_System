@@ -6,9 +6,9 @@
 A motor control system with STM32F103, drives a pointer connected to the motor to the required degree. A keyboard and an LCD is attached to import and read the degrees.
 This is a immature system with very simple functions. It is a part of my curriculum projects. Hope it can provide some knowledge for beginners in MCUs.
 
-使用正点原子的精英版产品，系统基于库函数编写。LCD1602模块的部分驱动来自网上。本系统绝大部分代码在main.c文件中，包括显示屏、键盘、电机模块的驱动程序。
+使用正点原子的精英版开发板产品，系统基于库函数编写。LCD1602模块的部分驱动来自网上。本系统绝大部分代码在main.c文件中，包括显示屏、键盘、电机模块的驱动程序。
 
-The board is an ALIENTEK production. Most of the code is in main.c file, including the drive program for the keyboard, LCD and motor module.
+The development board is an ALIENTEK production. Most of the code is in main.c file, including the drive program for the keyboard, LCD and motor module.
 
 ### 概述 General description
 
