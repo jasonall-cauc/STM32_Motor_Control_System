@@ -22,4 +22,7 @@ The system acquires parameters from the keyboard, displays them on the LCD, and 
 Global view:
 ![global view](https://github.com/jasonall-cauc/STM32_Motor_Control_System/blob/main/Global.png)
 
+不要在意背景中的音乐盒和各种凌乱的杜邦线……
+Please ignore the background and the messy wires...
+
 
