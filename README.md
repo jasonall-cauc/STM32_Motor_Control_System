@@ -30,10 +30,20 @@ Please ignore the background and the messy wires...
 负反馈通过在指针上加装47K电位器，并将模拟电位线性转换为位置信息实现。电位器共可转10圈，电压范围在0-5V范围内变化。实际的位置和电平对应关系通过测量获得。
 STM32F103单片机的一部分引脚可以接受模拟电平输入。本系统中设定PA1为模拟信号输入引脚。
 
+Negative feedback is achieved by attaching a variable resistor to the pointer and converting the analog voltage on the resistor to information 
+about the position. The variable resistor can rotate up to 10 rounds, and the voltage on the movable pin varies from 0V to VCC(5V). 
+The correspondence between actual position and analog voltage need to be manually measured. 
+Some pins of STM32F103 SCMs can accept analog input when configured correctly. This system has pin PA1 as the analog input.
+
 ### 关于电机控制 About Motor Control
 
 电机控制通过向L298N发送PWM波实现。本系统由中PA6和PA7引脚输出0或VCC的数字信号。其中PA6为对照信号，当正转时，PA6为低电平；当反转时，PA6为高电平。
 PA7引脚输出经过调制的、占空比一定的数字信号。当正转时，PA7对PA6形成一定占空比的电压差，通过L298N模块驱使电机转动；反转时相反。
+
+Motor control is achieved by sending PWM waves to L298N. In this system, pins PA6 and PA7 output digital signals of 0V or VCC. PA6 is the reference 
+signal. When rotating clockwise, PA6 outputs low electrical level. When rotating counterclockwise, it outputs high level. 
+PA7 outputs modulated digital signals that have a certain duty cycle. When clockwise rotation is needed, PA7 and PA6 form a positive PWM voltage to L298N, 
+driving the motor to rotate in the desired direction, and vice versa.
 
 ### 关于显示 About Display
 
