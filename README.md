@@ -25,4 +25,26 @@ Global view:
 不要在意背景中的音乐盒和各种凌乱的杜邦线……
 Please ignore the background and the messy wires...
 
+### 关于指针位置的负反馈 About Negative Feedback of the Pointer Position
 
+负反馈通过在指针上加装47K电位器，并将模拟电位线性转换为位置信息实现。电位器共可转10圈，电压范围在0-5V范围内变化。实际的位置和电平对应关系通过测量获得。
+STM32F103单片机的一部分引脚可以接受模拟电平输入。本系统中设定PA1为模拟信号输入引脚。
+
+### 关于电机控制 About Motor Control
+
+电机控制通过向L298N发送PWM波实现。本系统由中PA6和PA7引脚输出0或VCC的数字信号。其中PA6为对照信号，当正转时，PA6为低电平；当反转时，PA6为高电平。
+PA7引脚输出经过调制的、占空比一定的数字信号。当正转时，PA7对PA6形成一定占空比的电压差，通过L298N模块驱使电机转动；反转时相反。
+
+### 关于显示 About Display
+
+根据单片机实际使用的引脚不同，LCD1602模块所需要的驱动程序也有不同。对照表：
+
+The drive program for LCD1602 varies according to the actual pins allocated for it. Pin table from STM32 to LCD1602:
+
+PG1 --> EN
+
+PF13 --> RW
+
+PF15 --> RS
+
+PF0 ~ PF7 --> D0 ~ D7
